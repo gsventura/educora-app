@@ -4,6 +4,7 @@ import '/styles/fonts.css';  // Importe o arquivo CSS da fonte
 import { cn } from "@/lib/utils";
 import { ClerkProvider, SignedIn, SignInButton, SignedOut, UserButton } from "@clerk/nextjs";
 import { ptBR } from "@clerk/localizations";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 
 export const metadata: Metadata = {
@@ -23,9 +24,14 @@ export default function RootLayout({
     localization={ptBR}>
       <html lang="en">
         <body className={cn("font-Nacelle")}>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem>
           <main>
             {children}
           </main>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

@@ -6,17 +6,17 @@ export const navLinks = [
     },
     {
       label: "Criar questões",
-      route: "/transformations/add/restore",
+      route: "/product/add/generatequestions",
       icon: "/assets/icons/check-icon.svg",
     },
     {
       label: "Gerar planos de aula",
-      route: "/transformations/add/fill",
+      route: "/product/add/createclassplannings",
       icon: "/assets/icons/pencil-icon.svg",
     },
     {
       label: "Prompts prontos",
-      route: "/transformations/add/remove",
+      route: "/product/add/promptsinterface",
       icon: "/assets/icons/stars-icon.svg",
     },
     {
@@ -110,25 +110,25 @@ export const navLinks = [
   ];
   
   export const transformationTypes = {
-    restore: {
-      type: "restore",
-      title: "Restore Image",
-      subTitle: "Refine images by removing noise and imperfections",
-      config: { restore: true },
+    generatequestions: {
+      type: "generatequestions",
+      title: "Gerar Questões",
+      subTitle: "Gere questões de vestibular no modelo ENEM, Unicamp e USP",
+      config: { generateQuestions: true },
       icon: "image.svg",
     },
-    removeBackground: {
-      type: "removeBackground",
-      title: "Background Remove",
-      subTitle: "Removes the background of the image using AI",
-      config: { removeBackground: true },
+    createclassplannings: {
+      type: "createclassplannings",
+      title: "Gerar planos de aula",
+      subTitle: "Use a IA para criar ideias de aulas e planejamentos",
+      config: { createClassPlannings: true },
       icon: "camera.svg",
     },
-    fill: {
-      type: "fill",
-      title: "Generative Fill",
-      subTitle: "Enhance an image's dimensions using AI outpainting",
-      config: { fillBackground: true },
+    promptsinterface: {
+      type: "promptsinterface",
+      title: "Prompts prontos",
+      subTitle: "Interaja com a IA para ter ainda mais conteúdos para suas aulas",
+      config: { promptsInterface: true },
       icon: "stars.svg",
     },
     remove: {

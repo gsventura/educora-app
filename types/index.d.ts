@@ -89,11 +89,11 @@ declare type CreateUserParams = {
   };
   
   declare type TransformationTypeKey =
-    | "restore"
-    | "fill"
-    | "remove"
+    | "generatequestions"
+    | "createclassplannings"
+    | "promptsinterface"
     | "recolor"
-    | "removeBackground";
+    | "remove";
   
   // ====== URL QUERY PARAMS
   declare type FormUrlQueryParams = {

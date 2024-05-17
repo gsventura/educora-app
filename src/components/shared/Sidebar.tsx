@@ -7,6 +7,7 @@ import React from 'react'
 import { navLinks } from '../../../constants'
 import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button"
+import { ModeToggle } from '../ui/theme-switcher'
 
 
 const Sidebar = () => {
@@ -43,11 +44,15 @@ const Sidebar = () => {
                                 </li>
                             )
                         })}</ul>
-
+                        
                         <ul className='sidebar-nav_elements'>
+                            <div>
+                                <ModeToggle/>   
+                            </div>
                         {navLinks.slice(4).map((link) => {
+                            
                             const isActive = link.route === pathname
-
+                            
                             return(
                                 <li key={link.route}
                                 className={`sidebar-nav_element group ${isActive ? 'text-white' : 'text-gray-700'}`}
