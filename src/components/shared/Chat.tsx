@@ -11,7 +11,11 @@ import { useChat } from 'ai/react';
 export interface ChatProps {}
 
 export function Chat() {
-    const { messages, input, handleInputChange, handleSubmit } = useChat({api:'api/ex1'});
+    const { messages, input, handleInputChange, handleSubmit } = useChat({
+        api:'api/ex2',
+        onError: (e) => {
+            console.log(e)
+        }});
 
     return (
         <>
