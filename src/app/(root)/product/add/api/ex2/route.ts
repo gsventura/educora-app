@@ -10,7 +10,8 @@ import { HttpResponseOutputParser } from 'langchain/output_parsers';
 import { JSONLoader } from "langchain/document_loaders/fs/json";
 import { RunnableSequence } from '@langchain/core/runnables'
 import { formatDocumentsAsString } from 'langchain/util/document';
-import { CharacterTextSplitter } from 'langchain/text_splitter';
+import { OpenAIEmbeddings } from "@langchain/openai";
+
 
 const loader = new JSONLoader(
     "src/data/base-lp-enem.json",
@@ -48,6 +49,7 @@ assistant:`;
 export async function POST(req: Request) {
     try {
         // Extract the `messages` from the body of the request
+
         const { messages } = await req.json();
 
         const formattedPreviousMessages = messages.slice(0, -1).map(formatMessage);
@@ -57,7 +59,6 @@ export async function POST(req: Request) {
         const docs = await loader.load();
 
         const prompt = PromptTemplate.fromTemplate(TEMPLATE);
-
         const model = new ChatOpenAI({
             apiKey: process.env.OPENAI_API_KEY!,
             model: 'gpt-4o-2024-05-13',
