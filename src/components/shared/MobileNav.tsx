@@ -20,10 +20,8 @@ const MobileNav = () => {
     <header className='header'>
         <Link href='/'
         className='flex items-center gap=2 md:py-2'>
-            <Image src='/assets/images/logo-text.svg'
-                    alt='logo'
-                    width={180}
-                    height={28} />
+            <Image className='block dark:hidden' src='/assets/images/logo-text.svg' alt='logo' width={180} height={28}/>
+                <Image className='hidden dark:block' src='/assets/images/logo-text-dark.svg' alt='logo' width={180} height={28}/>
         </Link>
 
         <nav className='flex gap-2'>
@@ -41,11 +39,8 @@ const MobileNav = () => {
                     </SheetTrigger>
                     <SheetContent className='sheet-content sm:w-64'>
                         <>
-                            <Image
-                                src='/assets/images/logo-text.svg'
-                                width={152}
-                                height={23}
-                                alt='logo' />
+                        <Image className='block dark:hidden' src='/assets/images/logo-text.svg' alt='logo' width={152} height={23}/>
+                        <Image className='hidden dark:block' src='/assets/images/logo-text-dark.svg' alt='logo' width={152} height={23}/>
 
                             <ul className='header-nav_elements'>
                             {navLinks.map((link) => {
@@ -53,7 +48,7 @@ const MobileNav = () => {
 
                                 return(
                                     <li 
-                                    className={`${isActive && 'gradient-text'} p-18 flex whitespace-nowrap text-[#14213D]`}
+                                    className={`${isActive && 'text-dark-500'} p-18 flex whitespace-nowrap`}
                                     key={link.route}
                                     >
                                         <Link className='sidebar-link cursor-pointer' href={link.route}>

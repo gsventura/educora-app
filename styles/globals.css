@@ -317,11 +317,11 @@ h1 {
 
   /* Navbar Component */
   .header {
-    @apply flex-between fixed h-16 w-full border-b-4 border-blue-100 p-5 lg:hidden;
+    @apply flex-between fixed h-16 w-full border-b-4 border-blue-100 p-5 lg:hidden dark:bg-background;
   }
 
   .header-nav_elements {
-    @apply mt-8 flex w-full flex-col items-start gap-5;
+    @apply mt-8 flex w-full flex-col items-start gap-5 dark:text-purple-100;
   }
 
   /* Search Component */
