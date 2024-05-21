@@ -11,9 +11,10 @@ import { JSONLoader } from "langchain/document_loaders/fs/json";
 import { RunnableSequence } from '@langchain/core/runnables'
 import { formatDocumentsAsString } from 'langchain/util/document';
 import { OpenAIEmbeddings } from "@langchain/openai";
+import path from 'path';
 
 
-const loader = new JSONLoader("src/app/(root)/product/add/api/ex2/base-lp-enem.json");
+const loader = new JSONLoader(path.resolve("src/app/(root)/product/add/api/ex2/base-lp-enem.json"));
 
 export const dynamic = 'force-dynamic'
 
