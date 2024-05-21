@@ -6,6 +6,7 @@ module.exports = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./src/app/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -34,7 +35,7 @@ module.exports = {
           400: "#7986AC",
           500: "#606C80",
           600: "#2B3674",
-          700: "#384262",
+          700: "#2A2B50",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",

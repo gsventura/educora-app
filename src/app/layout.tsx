@@ -26,8 +26,9 @@ export default function RootLayout({
         <body className={cn("font-Nacelle")}>
         <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="system"
             enableSystem>
+              
           <main>
             {children}
           </main>

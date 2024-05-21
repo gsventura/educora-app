@@ -20,8 +20,8 @@ export function Chat() {
     return (
         <>
         <div className='flex min-h-screen items-center justify-center]'>
-            <Card className='w-[950px] h-full bg-[#F0F3FA]'>
-              <CardTitle className='text-center mb-5 mt-5 text-[#28417B]'>Pergunte à Educora IA</CardTitle>
+            <Card className='chat-block'>
+              <CardTitle className='h3-bold text-center'>Pergunte à Educora IA</CardTitle>
               <CardContent className='h-[500px]'>
               <ScrollArea className="h-full overflow-y-auto">
                 {messages.map(message => {

@@ -17,7 +17,8 @@ const Sidebar = () => {
     <aside className='sidebar'>
         <div className='flex size-full flex-col gap-4'>
             <Link href='/' className='sidebar-logo'>
-                <Image src='/assets/images/logo-text.svg' alt='logo' width={180} height={28}/>
+                <Image className='block dark:hidden' src='/assets/images/logo-text.svg' alt='logo' width={180} height={28}/>
+                <Image className='hidden dark:block' src='/assets/images/logo-text-dark.svg' alt='logo' width={180} height={28}/>
             </Link>
 
             <nav className='sidebar-nav'>
@@ -29,7 +30,7 @@ const Sidebar = () => {
 
                             return(
                                 <li key={link.route}
-                                className={`sidebar-nav_element group ${isActive ? 'text-white' : 'text-gray-700'}`}
+                                className={`sidebar-nav_element group ${isActive ? 'text-white' : 'dark:text-white'}`}
                                 style={{
                                     background: isActive ? 'linear-gradient(to bottom right, #14213D, #375BA9)' : 'none',
                                   }}>
@@ -55,7 +56,7 @@ const Sidebar = () => {
                             
                             return(
                                 <li key={link.route}
-                                className={`sidebar-nav_element group ${isActive ? 'text-white' : 'text-gray-700'}`}
+                                className={`sidebar-nav_element group ${isActive ? 'text-white' : 'dark:text-white'}`}
                                 style={{
                                     background: isActive ? 'linear-gradient(to bottom right, #14213D, #375BA9)' : 'none',
                                   }}>
@@ -70,7 +71,7 @@ const Sidebar = () => {
                                 </li>
                             )
                         })}
-                        <li className='sidebar-nav_element group flex-center cursor-pointer gap-4 p-2'>
+                        <li className='sidebar-nav_element dark:text-white group flex-center cursor-pointer gap-4 p-2'>
                             <UserButton afterSignOutUrl='/' showName/>
                         </li>
                         
@@ -78,7 +79,7 @@ const Sidebar = () => {
                 </SignedIn>
 
                 <SignedOut>
-                    <Button asChild className={`sidebar-nav_element group 'text-gray-700'`}
+                    <Button asChild className={`sidebar-nav_element group 'text-gray-700' dark:text-white`}
                                 style={{
                                     background: 'linear-gradient(to bottom right, #14213D, #375BA9)',
                                   }}>
