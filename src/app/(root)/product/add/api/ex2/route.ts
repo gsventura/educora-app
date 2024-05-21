@@ -13,7 +13,7 @@ import { formatDocumentsAsString } from 'langchain/util/document';
 import { OpenAIEmbeddings } from "@langchain/openai";
 
 
-const loader = new JSONLoader("base-lp-enem.json");
+const loader = new JSONLoader("src/app/(root)/product/add/api/ex2/base-lp-enem.json");
 
 export const dynamic = 'force-dynamic'
 
