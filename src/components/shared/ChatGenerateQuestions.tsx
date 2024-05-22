@@ -10,7 +10,7 @@ import { useChat } from 'ai/react';
 
 export interface ChatProps {}
 
-export function Chat() {
+export function ChatGenerateQuestions() {
     const { messages, input, handleInputChange, handleSubmit } = useChat({
         api:'api/ex2',
         onError: (e) => {

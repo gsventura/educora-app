@@ -8,6 +8,8 @@ import { navLinks } from '../../../constants'
 import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from '../ui/theme-switcher'
+import { dark, neobrutalism } from '@clerk/themes';
+
 
 
 const Sidebar = () => {
@@ -72,7 +74,13 @@ const Sidebar = () => {
                             )
                         })}
                         <li className='sidebar-nav_element dark:text-white group flex-center cursor-pointer gap-4 p-2'>
-                            <UserButton afterSignOutUrl='/' showName/>
+                            <UserButton appearance={{
+                                baseTheme: dark,
+                                elements:{
+                                    userButtonOuterIdentifier: "dark:text-white",
+                                }
+                            }}
+                            afterSignOutUrl='/' showName/>
                         </li>
                         
                     </ul>

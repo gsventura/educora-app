@@ -1,7 +1,7 @@
 import Header from '@/components/shared/Header'
 import React, { createContext, useContext, useState } from 'react';
 import { transformationTypes } from '../../../../../../constants'
-import { Chat } from '@/components/shared/Chat';
+import { ChatGenerateQuestions } from '@/components/shared/ChatGenerateQuestions';
 
 const AddTransformationTypePage = ({params: {type}}: SearchParamProps) => {
   const transformation = transformationTypes[type];
@@ -10,10 +10,11 @@ const AddTransformationTypePage = ({params: {type}}: SearchParamProps) => {
     <Header 
     title={transformation.title}
     subtitle={transformation.subTitle} />
-
-    <Chat />
+  {transformation.type === 'generatequestions' && <ChatGenerateQuestions />}
     </>
+    
   )
+
 }
 
 export default AddTransformationTypePage

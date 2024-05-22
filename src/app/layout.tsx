@@ -7,9 +7,10 @@ import { ptBR } from "@clerk/localizations";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
 
+
 export const metadata: Metadata = {
   title: "Educora",
-  description: "Educação para o futuro.",
+  description: "Educação para o futuro."
 };
 
 export default function RootLayout({
@@ -18,9 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider appearance={{
-      variables: {colorPrimary: '#14213D'}
-    }}
+    <ClerkProvider
     localization={ptBR}>
       <html lang="en">
         <body className={cn("font-Nacelle")}>
