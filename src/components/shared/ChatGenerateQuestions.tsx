@@ -32,13 +32,13 @@ export function ChatGenerateQuestions() {
                         {message.role === 'user' && (
                             <Avatar> 
                                 <AvatarFallback>DF</ AvatarFallback> 
-                                <AvatarImage src="https://github.com/diego3g.png" /> 
+                                <AvatarImage src="https://i.ibb.co/RYWBFhh/user-logo.png" /> 
                             </Avatar>
                         )}
                         {message.role === 'assistant' && (
                             <Avatar> 
                                 <AvatarFallback>DF</ AvatarFallback> 
-                                <AvatarImage src="https://github.com/rocketseat.png" />
+                                <AvatarImage src="https://i.ibb.co/0XLsKj7/round-logo.png" />
                             </Avatar>
                         )}
                         
