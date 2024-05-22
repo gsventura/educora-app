@@ -139,7 +139,7 @@ h1 {
 
   /* 30 */
   .h3-bold {
-    @apply font-bold text-[28px] leading-[140%] dark:text-purple-100;
+    @apply font-bold text-[28px] leading-[140%] text-[#19284D] dark:text-purple-100;
   }
 
   /* 24 */
